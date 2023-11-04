@@ -28,7 +28,7 @@ a {
     text-decoration: none;
 }
 
-.content {
+.main-content {
     width: 1170px;
     max-width: calc(100% - 48px);
     margin-left: auto;
@@ -76,21 +76,24 @@ a {
 }
 
 /* ==============header================ */
-.header {
+.header-fixed {
     margin-top: 36px;
 }
 
-.navbar {
+.header-fixed .body {
     display: flex;
     align-items: center;
 }
 
-.header ul {
-    display: flex;
+.nav {
     margin-left: auto;
 }
 
-.header ul a {
+.nav ul {
+    display: flex;
+}
+
+.nav ul a {
     padding: 0 21px;
 
     color: #171100;
@@ -101,6 +104,6 @@ a {
     line-height: 28px;
 }
 
-.header .actions {
+.header-fixed .actions {
     margin-left: 49px;
 }
