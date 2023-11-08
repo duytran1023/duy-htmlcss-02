@@ -80,6 +80,7 @@ a {
     background: #FFFCF4;
     position: sticky;
     top: -28px;
+    z-index: 1;
 }
 
 .header-fixed .body {
@@ -276,7 +277,7 @@ a {
 
 .content-block .watch-video {
     border: none;
-    background: #fff;
+    background: #FFFCF4;
     margin-left: 28px;
     display: flex;
     align-items: center;
@@ -305,5 +306,5 @@ a {
 }
 
 .content-block .stats {
-    margin-left: -28px;
+    margin: 8px 0 0 -28px;
 }
