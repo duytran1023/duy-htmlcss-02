@@ -37,6 +37,21 @@ a {
 
 }
 
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp.line-2 {
+    --line-clamp: 2;
+}
+
+.break-all {
+    word-break: break-all;
+}
+
 .heading {
     color: #171100;
     font-family: var(--font-heading);
@@ -79,16 +94,12 @@ a {
     font-weight: 600;
 }
 
-.btn-brown:hover, .btn {
-    opacity: 0.9;
+.btn-brown:hover, .btn-yellow:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }
 
-.line-clamp {
-    display: -webkit-box;
-    -webkit-line-clamp: var(--line-clamp, 2);
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
+
 
 .center {
     display: flex;
@@ -380,10 +391,15 @@ a {
     display: flex;
     gap: 30px;
 
+
 }
 
 .popular-bottom .list-items .item {
-    width: 33, 33333%;
+    flex: 1;
+    border-radius: 12px;
+    border: 1px solid #E2DFDA;
+
+    background: #FFF;
 
 
 }
@@ -395,7 +411,7 @@ a {
 
 .popular-bottom .item .item-img {
     height: 278px;
-    width: 370px;
+    width: 100%;
     object-fit: cover;
     border-radius: 12px 12px 0px 0px;
 }
@@ -414,12 +430,13 @@ a {
     align-items: center;
 }
 
-.popular-bottom .item .heading {
+.popular-bottom .item .heading a {
     color: #171100;
     font-family: Poppins;
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.66;
+    padding-right: 6px;
     /* 166.667% */
 }
 
@@ -449,3 +466,90 @@ a {
     margin-top: 12px;
 }
 
+.popular-bottom .actions .stats {
+    color: #171100;
+    font-family: Poppins;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* ==============feedback================ */
+.feedback {
+    margin-top: 135px;
+    padding: 96px 0;
+    background: #2E2100;
+}
+
+
+.feedback .feedback-item {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+
+}
+
+.feedback-list {
+    display: flex;
+    overflow: hidden;
+
+}
+
+.feedback .avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feedback .info .title {
+    margin-top: 18px;
+    color: #F7F7F7;
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.41;
+    /* 141.667% */
+}
+
+.feedback-item .info .desc {
+    color: #BFBCB2;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.85;
+}
+
+.feedback-item .dots {
+    display: flex;
+    margin-top: 28px;
+
+}
+
+.feedback-item .dot {
+    margin-right: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #634700;
+    cursor: pointer;
+}
+
+.feedback-item .dot.active {
+    background-color: #FFB900;
+    cursor: default;
+}
+
+.feedback-item .content {
+    width: 66%;
+    margin-left: auto;
+}
+
+.feedback-item blockquote {
+    margin-left: 30px;
+    color: #FFF;
+
+    font-size: 2.6rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.54;
+
+}
